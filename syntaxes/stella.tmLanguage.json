@@ -3,18 +3,94 @@
   "name": "Stella",
   "patterns": [
     {
+      "include": "#comments"
+    },
+    {
       "include": "#keywords"
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#identifiers"
     }
   ],
   "repository": {
+    "comments": {
+      "name": "comment.line.double-slash.stella",
+      "match": "\\/\\/[^\\n]*$"
+    },
     "keywords": {
       "patterns": [
         {
           "name": "keyword.control.stella",
-          "match": "\\b(if|while|for|return)\\b"
+          "match": "\\b(if|then|else|fn|return|let|letrec|in|as|match)\\b"
+        },
+        {
+          "name": "keyword.operator.stella",
+          "match": "\\b(and|or)\\b|->|=>|-|\\+|<|>|>=|<=|=="
+        },
+        {
+          "name": "keyword.other.stella",
+          "match": "\\b(extend with|language core|type)\\b"
+        },
+        {
+          "name": "storage.type.stella",
+          "comment": "Built-in types",
+          "match": "\\b(Nat|Bool|Unit)\\b"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.stella",
+          "comment": "Extension name",
+          "match": "#[\\w\\-]+\\b"
+        },
+        {
+          "name": "variable.parameter",
+          "comment": "Parameter declaration.stella",
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?= :)"
+        },
+        {
+          "name": "entity.name.function.stella",
+          "comment": "Function definition",
+          "match": "fn \\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "entity.name.function.stella",
+          "comment": "Function application",
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?=\\s*\\()"
+        },
+        {
+          "name": "entity.name.type.stella",
+          "comment": "Type alias",
+          "match": "\\b(?<=type )\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b"
+        },
+        {
+          "name": "variable.name.stella",
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.stella",
+          "match": "\\d+"
+        },
+        {
+          "name": "constant.language.stella",
+          "match": "\\b(true|false|unit)\\b"
+        },
+        {
+          "name": "support.function.stella",
+          "comment": "Built-in functions",
+          "match": "\\b(succ|not|fix|unfold|fold|head|tail|cons|inl|inr|Nat::rec|Nat::pred|Nat::iszero)\\b"
         }
       ]
     },
