@@ -2,7 +2,7 @@
   "name": "stella-language-server",
   "displayName": "Stella",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.76.0"
   },
@@ -32,6 +32,16 @@
         "language": "stella",
         "scopeName": "source.stella",
         "path": "./syntaxes/stella.tmLanguage.json"
+      },
+      {
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "scopeName": "source.markdown.stella.codeblock",
+        "path": "./syntaxes/md-injection.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.stella": "stella"
+        }
       }
     ]
   }
