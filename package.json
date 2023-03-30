@@ -1,0 +1,34 @@
+{
+  "name": "stella-language-server",
+  "displayName": "Stella",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "stella",
+        "aliases": [
+          "Stella",
+          "stella"
+        ],
+        "extensions": [
+          ".stella"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "stella",
+        "scopeName": "source.stella",
+        "path": "./syntaxes/stella.tmLanguage.json"
+      }
+    ]
+  }
+}
