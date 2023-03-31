@@ -23,8 +23,8 @@
         ],
         "configuration": "./language-configuration.json",
         "icon": {
-          "light": "./icons/favicon-32x32.png",
-          "dark": "./icons/favicon-32x32.png"
+          "light": "./icons/32x32.png",
+          "dark": "./icons/32x32.png"
         }
       }
     ],
