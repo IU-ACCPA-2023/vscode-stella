@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Yash-Singh1/vscode-snippets-json-schema/main/schema.json",
+  "language core": {
+    "prefix": ["lang"],
+    "body": ["language core;"],
+    "description": "Specify the "
+  },
+  "extension": {
+    "prefix": ["ext"],
+    "body": ["extend with #${1:extension-name};"],
+    "description": "A language extension"
+  },
+  "function": {
+    "prefix": ["fn", "def"],
+    "body": [
+      "fn ${1:function_name}(${2:n} : ${3:Nat}) -> ${4:Nat} {",
+      "\treturn $0;",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "abstraction": {
+    "prefix": ["fn", "abs"],
+    "body": ["fn (${1:n} : ${2:Nat}) {", "\treturn $0;", "}"],
+    "description": "Function abstraction"
+  },
+  "type alias": {
+    "prefix": ["type"],
+    "body": ["type $1 = $2;"],
+    "description": "Type alias"
+  },
+  "if else": {
+    "prefix": ["if"],
+    "body": ["if $1 then $2 else $3"],
+    "description": "If/Then/Else"
+  },
+  "let-binding": {
+    "prefix": ["let"],
+    "body": ["let $1 = $2 in $3"],
+    "description": "Let-binding"
+  }
+}

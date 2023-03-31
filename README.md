@@ -1,5 +1,8 @@
 # Stella Syntax Highlighter
 
+A language extension to provide support for the Stella language created for the ACCPA course
+
 ## Features
 
-Syntax highlighting for the Stella language created for the ACCPA course by Nikolai Kudasov.
+- Syntax highlighting, including inside markdown fenced block
+- Code snippets

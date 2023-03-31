@@ -7,7 +7,8 @@
     "vscode": "^1.76.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [
@@ -42,6 +43,12 @@
         "embeddedLanguages": {
           "meta.embedded.block.stella": "stella"
         }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "stella",
+        "path": "./snippets/snippets.json"
       }
     ]
   }

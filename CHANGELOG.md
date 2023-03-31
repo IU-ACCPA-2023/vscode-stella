@@ -4,6 +4,10 @@ All notable changes to the "stella-language-server" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.0.3
+
+- Added code snippets
+
 ## v0.0.2
 
 - Added support for highlighting Stella code in fenced code blocks in Markdown
