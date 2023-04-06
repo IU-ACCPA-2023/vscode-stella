@@ -30,6 +30,11 @@
           "match": "\\b(if|then|else|fn|return|let|letrec|in|as|match)\\b"
         },
         {
+          "name": "entity.name.tag",
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\b(?=\\s+fn\\s+\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)\\b)",
+          "comment": "Function annotation"
+        },
+        {
           "name": "keyword.operator.stella",
           "match": "\\b(and|or)\\b|->|=>|-|\\+|<|>|>=|<=|=="
         },
