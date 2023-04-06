@@ -40,7 +40,7 @@
         {
           "name": "storage.type.stella",
           "comment": "Built-in types",
-          "match": "\\b(Nat|Bool|Unit)\\b"
+          "match": "\\b(Nat|Bool|Unit)\\b(?!:|-|\\?|!)"
         }
       ]
     },
@@ -52,28 +52,28 @@
           "match": "#[\\w\\-]+\\b"
         },
         {
-          "name": "variable.parameter",
-          "comment": "Parameter declaration.stella",
-          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)(?=\\s+:)"
+          "name": "variable.parameter.stella",
+          "comment": "Parameter declaration",
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)(?=\\s+:)"
         },
         {
           "name": "entity.name.function.stella",
           "comment": "Function definition",
-          "match": "fn\\s+\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)(?=\\s*\\()"
+          "match": "(?<=fn\\s+)\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)(?=\\s*\\()"
         },
         {
           "name": "entity.name.function.stella",
           "comment": "Function application",
-          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?=\\s*\\()"
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)(?=\\s*\\()"
         },
         {
           "name": "entity.name.type.stella",
           "comment": "Type alias",
-          "match": "\\b(?<=type\\s+)\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)"
+          "match": "\\b(?<=type\\s+)\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)"
         },
         {
           "name": "variable.name.stella",
-          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b"
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-!?]*)"
         }
       ]
     },
