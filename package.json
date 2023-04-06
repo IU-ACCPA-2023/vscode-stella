@@ -1,6 +1,7 @@
 {
   "name": "stella-language-server",
   "displayName": "Stella",
+  "publisher": "NikolaiKudasovfizruk",
   "description": "Syntax highlighting for Stella, an educational statically typed programming language",
   "icon": "icons/192x192.png",
   "repository": "https://github.com/IU-ACCPA-2023/vscode-stella.git",
