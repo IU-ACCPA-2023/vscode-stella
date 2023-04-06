@@ -1,0 +1,24 @@
+name: Publish extension to VS Marketplace
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-extension:
+    name: Deploy the extension to Visual Studio Marketplace
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Set up Node 16 📦
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1
+        with:
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
