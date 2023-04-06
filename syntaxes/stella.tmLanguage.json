@@ -35,7 +35,7 @@
         },
         {
           "name": "keyword.other.stella",
-          "match": "\\b(extend with|language core|type)\\b"
+          "match": "\\b(extend\\s+with|language\\s+core|type)\\b"
         },
         {
           "name": "storage.type.stella",
@@ -54,12 +54,12 @@
         {
           "name": "variable.parameter",
           "comment": "Parameter declaration.stella",
-          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?= :)"
+          "match": "\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)(?=\\s+:)"
         },
         {
           "name": "entity.name.function.stella",
           "comment": "Function definition",
-          "match": "fn \\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b(?=\\s*\\()"
+          "match": "fn\\s+\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)(?=\\s*\\()"
         },
         {
           "name": "entity.name.function.stella",
@@ -69,7 +69,7 @@
         {
           "name": "entity.name.type.stella",
           "comment": "Type alias",
-          "match": "\\b(?<=type )\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)\\b"
+          "match": "\\b(?<=type\\s+)\\b([_a-zA-Z][_a-zA-Z0-9:\\-]*)"
         },
         {
           "name": "variable.name.stella",
