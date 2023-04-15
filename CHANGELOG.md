@@ -4,6 +4,10 @@ All notable changes to the "stella-language-server" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v0.0.5]
+
+- Added syntax highlighting support for references, exceptions, and type casting.
+
 ## [v0.0.4]
 
 - Improved syntax highlighting
@@ -21,5 +25,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Initial release
 - Basic syntax highlighting and file icon
 
+[v0.0.5]: https://github.com/IU-ACCPA-2023/vscode-stella/releases/tag/v0.0.5
 [v0.0.4]: https://github.com/IU-ACCPA-2023/vscode-stella/releases/tag/v0.0.4
 [v0.0.3]: https://github.com/IU-ACCPA-2023/vscode-stella/releases/tag/v0.0.3

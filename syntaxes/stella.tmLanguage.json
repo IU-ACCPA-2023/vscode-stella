@@ -27,7 +27,7 @@
       "patterns": [
         {
           "name": "keyword.control.stella",
-          "match": "\\b(if|then|else|fn|return|let|letrec|in|as|match)\\b"
+          "match": "\\b(if|then|else|fn|return|let|letrec|in|cast\\s+as|as|match|try|catch|with)\\b|\\bpanic!(?!:|\\w|-|\\?|!)"
         },
         {
           "name": "entity.name.tag",
@@ -36,16 +36,16 @@
         },
         {
           "name": "keyword.operator.stella",
-          "match": "\\b(and|or)\\b|->|=>|-|\\+|<|>|>=|<=|=="
+          "match": "\\b(and|or)\\b|->|=>|-|\\+|<|>|>=|<=|==|:=|\\*"
         },
         {
           "name": "keyword.other.stella",
-          "match": "\\b(extend\\s+with|language\\s+core|type)\\b"
+          "match": "\\b(extend\\s+with|language\\s+core|exception\\s+type|exception\\s+variant|type|throws)\\b"
         },
         {
           "name": "storage.type.stella",
           "comment": "Built-in types",
-          "match": "\\b(Nat|Bool|Unit)\\b(?!:|-|\\?|!)"
+          "match": "\\b(Nat|Bool|Unit|Top|Bot)\\b(?!:|-|\\?|!)"
         }
       ]
     },
@@ -86,6 +86,10 @@
       "patterns": [
         {
           "name": "constant.numeric.stella",
+          "match": "<0x(\\d|[a-f])+>"
+        },
+        {
+          "name": "constant.numeric.stella",
           "match": "\\d+"
         },
         {
@@ -95,7 +99,7 @@
         {
           "name": "support.function.stella",
           "comment": "Built-in functions",
-          "match": "\\b(succ|not|fix|unfold|fold|head|tail|cons|inl|inr|Nat::rec|Nat::pred|Nat::iszero)\\b"
+          "match": "\\b(succ|not|fix|unfold|fold|head|tail|cons|inl|inr|Nat::rec|Nat::pred|Nat::iszero|new|throw)\\b"
         }
       ]
     },
